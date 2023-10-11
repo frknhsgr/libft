@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 16:27:43 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 16:27:45 by fhosgor          ###   ########.fr       */
+/*   Created: 2023/10/11 18:05:46 by fhosgor           #+#    #+#             */
+/*   Updated: 2023/10/11 20:06:08 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	const char *a;
+	size_t len;
 	size_t i;
 
-	a = s;
 	i = 0;
-	while (a[i] != '\0' && i < n)
+	while (s1[i] && ft_strchr(set, s1[i]))
 	{
-		if (a[i] == c)
-			return ((char *)(a + i));
 		i++;
 	}
-	return (0);
+	len = ft_strlen(s1 + i);
+	while (len && ft_strchr(set, (s1 + i)[len - 1]))
+	{
+		len--;
+		printf("%zu\n", len);
+	}
+	return (ft_substr(s1, i, len));
 }
