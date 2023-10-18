@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:26:52 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 16:26:53 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/13 18:32:06 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *s;
+	void	*s;
 
 	if (count == 0 || size == 0)
 	{

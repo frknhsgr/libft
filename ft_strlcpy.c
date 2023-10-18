@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:28:14 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 16:28:16 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/13 19:00:28 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char *dest;
-	char *sorc;
-	size_t i;
+	char	*dest;
+	char	*sorc;
+	size_t	i;
 
 	i = 0;
 	dest = dst;

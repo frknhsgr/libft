@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:05:46 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 20:06:08 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/16 19:01:30 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t len;
-	size_t i;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
@@ -26,7 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (len && ft_strchr(set, (s1 + i)[len - 1]))
 	{
 		len--;
-		printf("%zu\n", len);
 	}
 	return (ft_substr(s1, i, len));
 }

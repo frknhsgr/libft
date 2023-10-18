@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:27:55 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 20:32:00 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/17 17:15:29 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	const char *sorc;
-	char *dest;
-	size_t i;
+	const char	*sorc;
+	char		*dest;
+	size_t		i;
 
 	sorc = src;
 	dest = dst;
@@ -24,13 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (len == 0 || dst == src)
 		return (dst);
 	else if (dst < src)
-	{
-		while (i < len)
-		{
-			dest[i] = sorc[i];
-			i++;
-		}
-	}
+		ft_memcpy(dest, src, len);
 	else if (src < dst)
 	{
 		while (len > 0)
@@ -39,5 +33,5 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			dest[len] = sorc[len];
 		}
 	}
-	return (dest);
+	return (dst);
 }

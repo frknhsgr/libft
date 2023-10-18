@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:27:59 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 19:29:19 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/16 18:09:18 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t a;
-	unsigned char *dest;
+	size_t			a;
+	unsigned char	*dest;
 
 	dest = b;
 	a = 0;

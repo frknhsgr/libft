@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:27:51 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/11 18:39:48 by fhosgor          ###   ########.fr       */
+/*   Updated: 2023/10/16 18:45:04 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t a;
+	size_t	a;
 
+	if (dst == NULL && src == NULL)
+		return (0);
 	a = 0;
 	while (a < n)
 	{
